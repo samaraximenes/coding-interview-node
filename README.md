@@ -2,6 +2,13 @@
 
 Sistema desenvolvido para avaliação técnica com Ruby on Rails. O projeto abrange correções de filtros, paginação com cursor, CRUD, envio de e-mails, relatórios com background jobs e testes automatizados.
 
+## Regras
+1. **fazer fork do projeto para seu github**
+2. **atualizar a versão do ruby e do rails**
+3. **criar o dockerfile e o docker-compose**
+4. **enviar o link do seu repositório para avaliação**
+5. **não usar IA, e nem copiar de outros projetos, nesse caso será desclassificado**
+
 ---
 
 ## ⚙️ Funcionalidades
@@ -29,19 +36,19 @@ Sistema desenvolvido para avaliação técnica com Ruby on Rails. O projeto abra
 7. **Cobertura de testes**
    - Cobertura extraída com SimpleCov. Relatório em `coverage/index.html`.
 
+8. **Gerar um relatório com QUERY RAW usando joins, e otimizando a query com indices**
+   - aqui você pode criar as tabelas e indices que você achar melhor para demostrar suas habilidades.
+
+9. **utilização de hotwire ou stimulus**
+   - aqui é para você mostrar seu conhecimento de ambos.
+
 ---
 
 ## ▶️ Como rodar
 
-### Pré-requisitos
+**preencher como rodar**
 
-- Docker e Docker Compose instalados
 
-### Passos
+## Como testar
 
-```bash
-git clone https://github.com/seu-usuario/rails-code-interview.git
-cd rails-code-interview
-docker-compose build
-docker-compose up
-docker-compose exec app rails db:setup
+**preencher como testar**
