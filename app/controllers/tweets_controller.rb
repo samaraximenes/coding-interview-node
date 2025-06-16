@@ -1,7 +1,7 @@
 class TweetsController < ApplicationController
   def index
     limit = (params[:limit] || 10).to_i
-    cursor = params[:cursor] #ex: "2025-06-14T12:00:00Z"
+    cursor = params[:cursor]
 
     tweets = Tweet.by_user_id(params[:user_id])
 
