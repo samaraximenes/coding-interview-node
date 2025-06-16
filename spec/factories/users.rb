@@ -3,6 +3,6 @@ FactoryBot.define do
     display_name { Faker::Name.name }
     username { Faker::Internet.username }
     email { Faker::Internet.email }
-    company { create(:company) }
+    association :company
   end
 end
