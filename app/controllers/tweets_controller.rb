@@ -3,7 +3,7 @@ class TweetsController < ApplicationController
     limit = (params[:limit] || 10).to_i
     cursor = params[:cursor] #ex: "2025-06-14T12:00:00Z"
 
-    tweets = Tweet.by_user(params[:user_id])
+    tweets = Tweet.by_user_id(params[:user_id])
 
     if cursor
       tweets = tweets.where('created_at < ?', Time.iso8601(cursor)).order(created_at: :desc).limit(limit)
@@ -17,5 +17,10 @@ class TweetsController < ApplicationController
       tweets: tweets,
       next_cursor: next_cursor
     }
+  end
+
+  def report
+    ReportGenerationJob.perform_async()
+    head :ok
   end
 end
